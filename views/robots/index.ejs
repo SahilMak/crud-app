@@ -5,7 +5,7 @@
     <title>Robots | Robots App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel='stylesheet' type="text/css" href='/stylesheets/style.css'/>
 </head>
 <body>
 <div class="container">
@@ -44,11 +44,11 @@
                 </td>
             </tr>
             <tr>
-                <td>222</td>
-                <td><a href="c3po.html">C3PO</a></td>
-                <td>The speaking half of the original droid duo</td>
-                <td>1999</td>
-                <td>2002</td>
+                <td><%= r2d2._id %></td>
+                <td><a href="r2d2.ejs"><%= r2d2.name %></a></td>
+                <td><%= r2d2.description %></td>
+                <td><%= r2d2.created_at %></td>
+                <td><%= r2d2.updated_at %></td>
                 <td>
                     <button type="button" class="btn btn-warning">Edit</button>
                 </td>
@@ -57,11 +57,11 @@
                 </td>
             </tr>
             <tr>
-                <td>333</td>
-                <td><a href="r2d2.html">R2-D2</a></td>
-                <td>The beeping half of the original droid duo</td>
-                <td>1977</td>
-                <td>1980</td>
+                <td><%= c3po._id %></td>
+                <td><a href="c3po.ejs"><%= c3po.name %></a></td>
+                <td><%= c3po.description %></td>
+                <td><%= c3po.created_at %></td>
+                <td><%= c3po.updated_at %></td>
                 <td>
                     <button type="button" class="btn btn-warning">Edit</button>
                 </td>
