@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Robots | Robots App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1><a href="../">Home</a></h1>
+        <button type="button" class="btn btn-success pull-right robot-btn">Recycle</button>
+        <a class="btn btn-primary pull-right robot-btn" href="new.ejs" role="button">New</a>
+        <h2><a href="./">Robots</a></h2>
+    </header>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Created</th>
+                <th>Updated</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><%= bb8._id %></td>
+                <td><a href="bb8.ejs"><%= bb8.name %></a></td>
+                <td><%= bb8.description %></td>
+                <td><%= bb8.created_at %></td>
+                <td><%= bb8.updated_at %></td>
+                <td>
+                    <button type="button" class="btn btn-warning">Edit</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>222</td>
+                <td><a href="c3po.html">C3PO</a></td>
+                <td>The speaking half of the original droid duo</td>
+                <td>1999</td>
+                <td>2002</td>
+                <td>
+                    <button type="button" class="btn btn-warning">Edit</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>333</td>
+                <td><a href="r2d2.html">R2-D2</a></td>
+                <td>The beeping half of the original droid duo</td>
+                <td>1977</td>
+                <td>1980</td>
+                <td>
+                    <button type="button" class="btn btn-warning">Edit</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+    <footer>
+        <p>
+            <a href="http://www.sahilmak.tech/robots-app" target="_blank">View</a> |
+            <a href="https://github.com/SahilMak/robots-app" target="_blank">Source</a>
+        </p>
+    </footer>
+</div>
+</body>
+</html>
