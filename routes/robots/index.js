@@ -22,9 +22,7 @@ fetch('https://southernct-443-robots-api.herokuapp.com/api/robots.json')
         console.log("ERROR:", err);
     });
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
-
     res.render('robots/index', {
         r2d2: r2d2,
         bb8: bb8,
