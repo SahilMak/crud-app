@@ -13,9 +13,14 @@ fetch('https://southernct-443-robots-api.herokuapp.com/api/robots.json')
     .then(function (response) {
         response.json()
             .then(function (data) {
-                r2d2 = data[0];
-                bb8 = data[1];
-                c3po = data[2];
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].name === "r2d2")
+                        r2d2 = data[i];
+                    if (data[i].name === "bb8")
+                        bb8 = data[i];
+                    if (data[i].name === "c3po")
+                        c3po = data[i];
+                }
             })
     })
     .catch(function (err) {
