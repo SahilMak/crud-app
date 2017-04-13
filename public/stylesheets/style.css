@@ -6,3 +6,8 @@ body {
 a {
   color: #00B7FF;
 }
+
+.robot-btn {
+  margin-left: 0.5em;
+  margin-top: 0.7em;
+}
