@@ -16,7 +16,38 @@
     </header>
 
     <h2><a href="/robots">Robots</a></h2>
-    <p>Under construction</p>
+    <h3>Robot #<%= robot._id %></h3>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Created</th>
+                <th>Updated</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><%= robot._id %></td>
+                <td><%= robot.name %></td>
+                <td><%= robot.description %></td>
+                <td><%= new Date(robot.created_at).toUTCString() %></td>
+                <td><%= new Date(robot.updated_at).toUTCString() %></td>
+                <td>
+                    <button type="button" class="btn btn-warning">Edit</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
     <footer>
         <p>
