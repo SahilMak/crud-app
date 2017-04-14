@@ -4,23 +4,14 @@
 var express = require('express');
 var fetch = require('node-fetch');
 var router = express.Router();
-var r2d2 = [];
-var bb8 = [];
-var c3po = [];
+var data = [];
 
 // Get JSON data
 fetch('https://southernct-443-robots-api.herokuapp.com/api/robots.json')
     .then(function (response) {
         response.json()
-            .then(function (data) {
-                for (var i = 0; i < data.length; i++) {
-                    if (data[i].name === "r2d2")
-                        r2d2 = data[i];
-                    if (data[i].name === "bb8")
-                        bb8 = data[i];
-                    if (data[i].name === "c3po")
-                        c3po = data[i];
-                }
+            .then(function (info) {
+                data = info;
             })
     })
     .catch(function (err) {
@@ -29,9 +20,7 @@ fetch('https://southernct-443-robots-api.herokuapp.com/api/robots.json')
 
 router.get('/', function(req, res, next) {
     res.render('robots/index', {
-        r2d2: r2d2,
-        bb8: bb8,
-        c3po: c3po
+        data: data
     });
 });
 

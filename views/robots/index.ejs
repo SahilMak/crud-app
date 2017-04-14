@@ -30,12 +30,13 @@
             </tr>
             </thead>
             <tbody>
+            <% data.forEach(function (item) { %>
             <tr>
-                <td><%= bb8._id %></td>
-                <td><a href="bb8.ejs"><%= bb8.name %></a></td>
-                <td><%= bb8.description %></td>
-                <td><%= bb8.created_at %></td>
-                <td><%= bb8.updated_at %></td>
+                <td><%= item._id %></td>
+                <td><a href="/<%= item.name %>"><%= item.name %></a></td>
+                <td><%= item.description %></td>
+                <td><%= item.created_at %></td>
+                <td><%= item.updated_at %></td>
                 <td>
                     <button type="button" class="btn btn-warning">Edit</button>
                 </td>
@@ -43,32 +44,7 @@
                     <button type="button" class="btn btn-danger">Delete</button>
                 </td>
             </tr>
-            <tr>
-                <td><%= r2d2._id %></td>
-                <td><a href="r2d2.ejs"><%= r2d2.name %></a></td>
-                <td><%= r2d2.description %></td>
-                <td><%= r2d2.created_at %></td>
-                <td><%= r2d2.updated_at %></td>
-                <td>
-                    <button type="button" class="btn btn-warning">Edit</button>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-danger">Delete</button>
-                </td>
-            </tr>
-            <tr>
-                <td><%= c3po._id %></td>
-                <td><a href="c3po.ejs"><%= c3po.name %></a></td>
-                <td><%= c3po.description %></td>
-                <td><%= c3po.created_at %></td>
-                <td><%= c3po.updated_at %></td>
-                <td>
-                    <button type="button" class="btn btn-warning">Edit</button>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-danger">Delete</button>
-                </td>
-            </tr>
+            <% }); %>
             </tbody>
         </table>
     </div>
