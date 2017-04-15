@@ -33,7 +33,7 @@
             <% data.forEach(function (item) { %>
             <tr>
                 <td><%= item._id %></td>
-                <td><a href="/robots/<%= item.name %>"><%= item.name %></a></td>
+                <td><a href="/robots/<%= item._id %>"><%= item.name %></a></td>
                 <td><%= item.description %></td>
                 <td><%= new Date(item.created_at).toUTCString() %></td>
                 <td><%= new Date(item.updated_at).toUTCString() %></td>
