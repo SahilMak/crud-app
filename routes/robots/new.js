@@ -4,7 +4,7 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/robots/new', function(req, res) {
+router.get('/new', function(req, res) {
     res.render('robots/new');
 });
 

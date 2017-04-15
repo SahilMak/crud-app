@@ -18,7 +18,7 @@ fetch('https://southernct-443-robots-api.herokuapp.com/api/robots.json')
         console.log("ERROR:", err);
     });
 
-router.get('/robots', function(req, res) {
+router.get('/', function(req, res) {
     res.render('robots/index', {
         data: data
     });

@@ -10,6 +10,7 @@ var users = require('./routes/users');
 var robots_index = require('./routes/robots/index');
 var robots_new = require('./routes/robots/new');
 var robots_show = require('./routes/robots/show');
+var robots_edit = require('./routes/robots/edit');
 
 var app = express();
 
@@ -27,9 +28,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/', users);
-app.use('/', robots_index);
-app.use('/', robots_new);
-app.use('/', robots_show);
+app.use('/robots', robots_index);
+app.use('/robots', robots_new);
+app.use('/robots', robots_show);
+app.use('/robots', robots_edit);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
