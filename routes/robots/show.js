@@ -6,7 +6,7 @@ var fetch = require('node-fetch');
 var router = express.Router();
 
 router.get('/:id', function(req, res) {
-    fetch('https://southernct-443-robots-api.herokuapp.com/api/robots/' + req.params.id + '.json')
+    fetch('https://southernct-443-robots-api.herokuapp.com/api/robots/' + req.params.id)
         .then(function (response) {
             response.json()
                 .then(function (info) {

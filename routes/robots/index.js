@@ -7,7 +7,7 @@ var router = express.Router();
 var data = [];
 
 // Get JSON data
-fetch('https://southernct-443-robots-api.herokuapp.com/api/robots.json')
+fetch('https://southernct-443-robots-api.herokuapp.com/api/robots')
     .then(function (response) {
         response.json()
             .then(function (info) {
