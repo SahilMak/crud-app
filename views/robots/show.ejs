@@ -25,6 +25,7 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Description</th>
+                <th>In Stock</th>
                 <th>Created</th>
                 <th>Updated</th>
                 <th>&nbsp;</th>
@@ -36,6 +37,7 @@
                 <td><%= robot._id %></td>
                 <td><%= robot.name %></td>
                 <td><%= robot.description %></td>
+                <td><%= robot.in_stock %></td>
                 <td><%= new Date(robot.created_at).toUTCString() %></td>
                 <td><%= new Date(robot.updated_at).toUTCString() %></td>
                 <td>
