@@ -5,20 +5,19 @@ var express = require('express');
 var fetch = require('node-fetch');
 var router = express.Router();
 
-// Get JSON data
-fetch('https://southernct-443-robots-api.herokuapp.com/api/robots')
-    .then(function (response) {
-        response.json()
-            .then(function (info) {
-                router.get('/', function(req, res) {
+router.get('/', function (req, res) {
+    fetch('https://southernct-443-robots-api.herokuapp.com/api/robots')
+        .then(function (response) {
+            response.json()
+                .then(function (info) {
                     res.render('robots/index', {
                         data: info
                     });
-                });
-            })
-    })
-    .catch(function (err) {
-        console.log("ERROR:", err);
-    });
+                })
+        })
+        .catch(function (err) {
+            console.log("ERROR:", err);
+        });
+});
 
 module.exports = router;
