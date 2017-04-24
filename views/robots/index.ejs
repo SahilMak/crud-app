@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel='stylesheet' type="text/css" href='/stylesheets/style.css'/>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="/javascripts/script.js" async></script>
 </head>
 <body>
 <div class="container">
@@ -40,10 +43,10 @@
                 <td><%= new Date(item.created_at).toUTCString() %></td>
                 <td><%= new Date(item.updated_at).toUTCString() %></td>
                 <td>
-                    <button type="button" class="btn btn-warning">Edit</button>
+                    <button type="button" class="btn btn-warning edit">Edit</button>
                 </td>
                 <td>
-                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-danger delete">Delete</button>
                 </td>
             </tr>
             <% }); %>
