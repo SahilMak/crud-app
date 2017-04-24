@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel='stylesheet' type="text/css" href='/stylesheets/style.css'/>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="/javascripts/script.js" async></script>
 </head>
 <body>
 <div class="container">
@@ -16,7 +19,7 @@
 
     <h3>New Robot</h3>
 
-    <form class="form-horizontal">
+    <form class="form-horizontal" id="newForm">
         <div class="form-group">
             <label for="name" class="col-md-2 control-label">Name:</label>
             <div class="col-md-10">
@@ -37,7 +40,7 @@
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <button type="submit" class="btn btn-success" id="submit">Submit</button>
+                <button type="submit" class="btn btn-success">Submit</button>
             </div>
         </div>
     </form>

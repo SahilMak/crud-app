@@ -4,13 +4,8 @@
 var express = require('express');
 var router = express.Router();
 
-router.route('/new')
-    .get(function (req, res) {
-        res.render('robots/new');
-    })
-    // .post(function (req, res) {
-    //     console.log('something here');
-    // })
-;
+router.get('/new', function (req, res) {
+    res.render('robots/new');
+});
 
 module.exports = router;
