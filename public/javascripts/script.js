@@ -3,7 +3,7 @@
  */
 $(document).ready(function () {
     var url = "https://southernct-443-robots-api.herokuapp.com/api/robots/";
-
+    var location = window.location.href;
     // Add robot
     $("#newForm").submit(function (event) {
         event.preventDefault();
@@ -16,16 +16,14 @@ $(document).ready(function () {
                 alert("ERROR: " + errorThrown);
             });
     });
-
     // Edit robot
-    var id = "";
     $(".edit").click(function () {
-        id = $(this).parent().siblings().eq(0).text();
+        var id = $(this).parent().siblings().eq(0).text();
         window.location = "/robots/" + id + "/edit";
     });
     $("#editForm").submit(function (event) {
         event.preventDefault();
-        console.log(url + id);
+        var id = location.split("robots/")[1].split("/edit")[0];
         $.ajax({
             method: "PUT",
             url: url + id,
@@ -38,7 +36,6 @@ $(document).ready(function () {
                 alert("ERROR: " + errorThrown);
             });
     });
-
     // Delete robot
     $(".delete").click(function () {
         var row = $(this).parent().siblings();
