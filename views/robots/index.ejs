@@ -34,14 +34,14 @@
             </tr>
             </thead>
             <tbody>
-            <% data.forEach(function (item) { %>
+            <% data.forEach(function (robot) { %>
             <tr>
-                <td><%= item._id %></td>
-                <td><a href="/robots/<%= item._id %>"><%= item.name %></a></td>
-                <td><%= item.description %></td>
-                <td><%= item.in_stock %></td>
-                <td><%= new Date(item.created_at).toUTCString() %></td>
-                <td><%= new Date(item.updated_at).toUTCString() %></td>
+                <td><%= robot._id %></td>
+                <td><a href="/robots/<%= robot._id %>"><%= robot.name %></a></td>
+                <td><%= robot.description %></td>
+                <td><%= robot.in_stock %></td>
+                <td><%= new Date(robot.created_at).toUTCString() %></td>
+                <td><%= new Date(robot.updated_at).toUTCString() %></td>
                 <td>
                     <button type="button" class="btn btn-warning edit">Edit</button>
                 </td>
@@ -54,13 +54,7 @@
         </table>
     </div>
 
-    <hr>
-    <footer>
-        <p>
-            <a href="http://crud-app.sahilmak.tech/" target="_blank">View</a> |
-            <a href="https://github.com/SahilMak/crud-app" target="_blank">Source</a>
-        </p>
-    </footer>
+    <%- include ../footer.ejs %>
 </div>
 </body>
 </html>
