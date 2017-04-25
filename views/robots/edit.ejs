@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit | Robots App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel='stylesheet' type="text/css" href='/stylesheets/style.css'/>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="/javascripts/script.js" async></script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1><a href="../">Home</a></h1>
+    </header>
+    <h2><a href="/robots">Robots</a></h2>
+
+    <h3>Edit Robot</h3>
+
+    <form class="form-horizontal" id="editForm">
+        <div class="form-group">
+            <label for="name" class="col-md-2 control-label">Name:</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" id="name" value="<%= robot.name %>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description" class="col-md-2 control-label">Description:</label>
+            <div class="col-md-10">
+                <textarea class="form-control" rows="10" name="description"
+                          id="description"><%= robot.description %></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-md-2 control-label">In Stock:</label>
+            <div class="col-md-10">
+                <input type="number" class="form-control" id="stock" value="<%= robot.in_stock %>">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </div>
+    </form>
+
+    <footer>
+        <p>
+            <a href="http://crud-app.sahilmak.tech/" target="_blank">View</a> |
+            <a href="https://github.com/SahilMak/crud-app" target="_blank">Source</a>
+        </p>
+    </footer>
+</div>
+</body>
+</html>
