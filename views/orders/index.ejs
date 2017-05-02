@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders | Robots App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel='stylesheet' type="text/css" href='/stylesheets/style.css'/>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="/javascripts/script.js" async></script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1><a href="../">Home</a></h1>
+        <a class="btn btn-primary pull-right robot-btn" href="/orders/new" role="button">New</a>
+    </header>
+
+    <h2><a href="/robots">Robots</a></h2>
+    <h3>Orders</h3>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Robot ID</th>
+                <th>Robot Name</th>
+                <th>Quantity</th>
+                <th>Created</th>
+                <th>Updated</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% if (data.length == 0) { %>
+            <tr>
+                <td colspan="8" align="center">No orders have been placed yet</td>
+            </tr>
+            <% } else { %>
+            <% data.forEach(function (order) { %>
+            <tr>
+                <td><%= order.order_id %></td>
+                <td><%= order.robot_id %></td>
+                <td><%= order.robot_name %></td>
+                <td><%= order.quantity %></td>
+                <td><%= new Date(order.created_at).toUTCString() %></td>
+                <td><%= new Date(order.updated_at).toUTCString() %></td>
+                <td>
+                    <button type="button" class="btn btn-warning edit">Edit</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger delete">Delete</button>
+                </td>
+            </tr>
+            <% }); } %>
+            </tbody>
+        </table>
+    </div>
+
+    <%- include ../footer.ejs %>
+</div>
+</body>
+</html>
