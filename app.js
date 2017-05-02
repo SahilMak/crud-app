@@ -1,3 +1,4 @@
+require('./db');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -11,6 +12,7 @@ var robots_index = require('./routes/robots/index');
 var robots_new = require('./routes/robots/new');
 var robots_show = require('./routes/robots/show');
 var robots_edit = require('./routes/robots/edit');
+var orders_index = require('./routes/orders/index');
 
 var app = express();
 
@@ -32,6 +34,7 @@ app.use('/robots', robots_index);
 app.use('/robots', robots_new);
 app.use('/robots', robots_show);
 app.use('/robots', robots_edit);
+app.use('/orders', orders_index);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
