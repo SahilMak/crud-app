@@ -8,7 +8,6 @@ var router = express.Router();
 
 router.get('/', function (req, res) {
     Orders.find(function (err, doc) {
-        console.log(doc);
         res.render('orders/index', {
             data: doc
         });
