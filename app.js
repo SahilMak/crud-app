@@ -14,6 +14,7 @@ var robots_new = require('./routes/robots/new');
 var robots_show = require('./routes/robots/show');
 var robots_edit = require('./routes/robots/edit');
 var orders_index = require('./routes/orders/index');
+var orders_new = require('./routes/orders/new');
 
 var app = express();
 
@@ -36,6 +37,7 @@ app.use('/robots', robots_new);
 app.use('/robots', robots_show);
 app.use('/robots', robots_edit);
 app.use('/orders', orders_index);
+app.use('/orders', orders_new);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
