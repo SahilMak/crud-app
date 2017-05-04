@@ -23,7 +23,6 @@ $(document).ready(function () {
     // New order
     $("#newOrder").submit(function (event) {
         event.preventDefault();
-        console.log(stock - parseInt($("#quantity").val()));
         // PUT
         $.ajax({
             method: "PUT",
