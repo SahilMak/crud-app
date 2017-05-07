@@ -36,6 +36,10 @@ app.use('/robots', robots_edit);
 app.use('/orders', orders_index);
 app.use('/orders', orders_new);
 
+app.get('/favicon.ico', function(req, res) {
+    res.send(204);
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
