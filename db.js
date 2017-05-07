@@ -2,11 +2,10 @@
  * Created by Sahil Makhijani on 5/2/2017.
  */
 var mongoose = require('mongoose');
-var login = require('./credentials');
 var Schema = mongoose.Schema;
 var uri = process.env.MONGOLAB_URI ||
     process.env.MONGOHQ_URL ||
-    'mongodb://' + login.user + ':' + login.pass + '@ds129281.mlab.com:29281/heroku_xc5rr0jk';
+    'mongodb://sahilmak:dbpass@ds129281.mlab.com:29281/heroku_xc5rr0jk';
 
 var Orders = new Schema({
     order_id: Schema.ObjectId,
