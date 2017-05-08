@@ -28,9 +28,6 @@
                 <th>Robot Name</th>
                 <th>Quantity</th>
                 <th>Created</th>
-                <th>Updated</th>
-                <th>&nbsp;</th>
-                <th>&nbsp;</th>
             </tr>
             </thead>
             <tbody>
@@ -46,13 +43,6 @@
                 <td><%= order.robot_name %></td>
                 <td><%= order.quantity %></td>
                 <td><%= new Date(order.created_at).toUTCString() %></td>
-                <td><%= new Date(order.updated_at).toUTCString() %></td>
-                <td>
-                    <button type="button" class="btn btn-warning edit">Edit</button>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-danger delete">Delete</button>
-                </td>
             </tr>
             <% }); } %>
             </tbody>

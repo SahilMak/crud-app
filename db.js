@@ -12,8 +12,7 @@ var Orders = new Schema({
     robot_id: String,
     robot_name: String,
     quantity: Number,
-    created_at: {type: Date, default: Date.now},
-    updated_at: {type: Date, default: Date.now}
+    created_at: {type: Date, default: Date.now}
 });
 
 mongoose.model('orders', Orders);
